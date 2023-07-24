@@ -2,6 +2,8 @@ import { useDispatch } from 'react-redux';
 
 import { login } from '../../redux/auth/authOperations';
 
+import Button from '@mui/material/Button';
+
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
@@ -38,9 +40,9 @@ export const LoginForm = () => {
             placeholder="Enter password"
           />
         </label>
-        <button className="Button" type="submit">
+        <Button variant="contained" type="submit">
           Log in
-        </button>
+        </Button>
       </form>
     </div>
   );

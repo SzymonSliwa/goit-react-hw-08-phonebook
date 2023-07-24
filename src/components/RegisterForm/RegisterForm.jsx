@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
+import Button from '@mui/material/Button';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -32,7 +33,6 @@ export const RegisterForm = () => {
           placeholder="Enter user name"
         />
         <h3 className="title"> Email</h3>
-
         <input
           className="input"
           type="email"
@@ -40,17 +40,15 @@ export const RegisterForm = () => {
           placeholder="Enter e-mail"
         />
         <h3 className="title"> Password</h3>
-
         <input
           className="input"
           type="password"
           name="password"
           placeholder="Enter password"
         />
-
-        <button className="button" type="submit">
+        <Button variant="contained" type="submit">
           Register
-        </button>
+        </Button>
       </form>
     </div>
   );

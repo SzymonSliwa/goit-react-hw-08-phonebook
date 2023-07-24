@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 
+import Button from '@mui/material/Button';
+
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -74,12 +76,13 @@ export const ContactForm = () => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           onChange={handleNumberChange}
+          className="input"
         />
 
         <br></br>
-        <button type="submit" className="button">
+        <Button variant="contained" type="submit">
           Add contact
-        </button>
+        </Button>
       </div>
     </form>
   );
